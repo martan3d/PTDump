@@ -2,16 +2,12 @@
 Protothrottle Experiments, dump slot memory
 
 - This is python code for a PC. I'm running windows 11 and python 3.11.0
-- I'll be adding to this repo but for now it's very (very) basic, request EE slot memory from the Protothrottle and display it. There is no error checking, that's all it does, super simple.
-- I revisited the ptci repo from ISE but it was more than I needed, plus it was done with a Raspberry Pi in mind.
-- For MRBUS, there are only a few python methods you need, so I extracted those into my xbee.py module.
 - This program REQUIRES a USB Xbee 'dongle' device to talk to the Protothrottle. The dongle MUST use the Silicon Labs CP210x chipset and have the USB Driver for that installed on your PC. 
   The dongle H/W can be found on Amazon, search for 'WaveShare Xbee'.
 - The Xbee chip for this can be ordered from Sparkfun.com.
 - You will also need the XCTU program from the Xbee manufacturer, Digi, it's free. If you want to play with around with Xbees, this program is essential.
 - As far as configuration, the Xbee must have the 802.15.4 TH firmware installed, many are shipped with the Digimesh firmware, that won't work. XCTU will let you install the latest if needed using the 'update' button at the top. Once the firmware is verified, you have to change a few configuration items in the chip.  Set the ID Network PAN ID to 225. Find the API Enable and set it to API Mode without Escapes (1).  Just below that, find the baud rate and set it to 38400.  Everything else you can leave at the defaults.
-- Example Output. To the left is the locomotive address, it's the first two bytes of each line, each line is a config slot. The number at the far right is the offset we started the read from. This represents reading the first 12 bytes of a slot config, then skipping to the next slot, etc. I can't seem to get past slot 17, although I have all 20 configs in my PT setup.  It just stops sending valid stuff when I ask for the remaining configs.  So you will have to control C out of the program unless you change the final count to not look for all 20. (line 114 in main.py)
-
+- Example Output. To the left is the locomotive address, it's the first two bytes of each line, each line is a config slot. The number at the far right is the offset we started the read from. This represents reading the first 12 bytes of a slot config, then skipping to the next slot, etc. I can't seem to get past slot 17, although I have all 20 configs in my PT setup.  It just stops sending valid stuff when I ask for the remaining configs.
 ```
 E:\Program Files\Beeware\PTInterface>python main.py
 xbee port opened
@@ -32,8 +28,8 @@ xbee port opened
 1956 - a4 07 02 01 07 80 08 80 04 80 00 09 -  1920
  729 - d9 02 02 01 0b 16 08 80 00 80 00 19 -  2048
 5406 - 1e 15 02 01 0b 04 05 06 00 80 00 19 -  2176
+
 ```
-  
 XCTU download
 ```
 http://blueridgeengineering.net/bin/40003026_AH.exe
