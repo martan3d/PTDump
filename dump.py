@@ -45,6 +45,9 @@ def main():
             if msg == None:                     # skip misfires
                continue
 
+            if len(msg) < 29:                   # short ones sometimes, not sure why, toss it and retry
+               continue
+
             slotindex = slotindex + 12
 
             for i in range(16, len(msg)-1):     # trim off stuff we don't need
@@ -52,7 +55,7 @@ def main():
 
             i = i + 1
 
-            if i > 5:
+            if i > 10:
                break
 
         la = m[0]
