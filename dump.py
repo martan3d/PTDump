@@ -32,8 +32,10 @@ def main():
         for i in range(16, len(msg)-1):         # trim off the header info and the checksum from the xbee return message
            m.append(msg[i])
 
-        for i in range(0, 4):                   # get the remainder of the slot data
-            slotindex = slotindex + 12
+        i = 0
+        slotindex = slotindex + 12
+
+        while True:                   # get the remainder of the slot data
             lad = slotindex & 0x00ff
             had = (slotindex & 0xff00) >> 8
 
@@ -43,8 +45,15 @@ def main():
             if msg == None:                     # skip misfires
                continue
 
+            slotindex = slotindex + 12
+
             for i in range(16, len(msg)-1):     # trim off stuff we don't need
                m.append(msg[i])
+
+            i = i + 1
+
+            if i > 5:
+               break
 
         la = m[0]
         lh = m[1] << 8
