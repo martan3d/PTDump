@@ -7,11 +7,8 @@ Protothrottle Experiments, dump slot memory
 - The Xbee chip for this can be ordered from Sparkfun.com.
 - You will also need the XCTU program from the Xbee manufacturer, Digi, it's free. If you want to play with around with Xbees, this program is essential.
 - As far as configuration, the Xbee must have the 802.15.4 TH firmware installed, many are shipped with the Digimesh firmware, that won't work. XCTU will let you install the latest if needed using the 'update' button at the top. Once the firmware is verified, you have to change a few configuration items in the chip.  Set the ID Network PAN ID to 225. Find the API Enable and set it to API Mode without Escapes (1).  Just below that, find the baud rate and set it to 38400.  Everything else you can leave at the defaults.
+
 - Example Output. To the left is the locomotive address, it's the first two bytes of each line, each line is a config slot. The number at the far right is the start offset into eememory in the Protothrottle.
-- For a description of what byte means what, take a look at this file:
-```
-https://github.com/IowaScaledEngineering/mrbw-cst/blob/master/src/cst-eeprom.h
-```
 ```
 E:\Program Files\Beeware\PTInterface>python dump.py
 xbee port opened
@@ -31,8 +28,10 @@ xbee port opened
 2003 - d3 07 02 01 06 07 08 80 80 0a 00 80 80 80 00 80 05 06 80 80 80 ff 02 04 -  1792
 1956 - a4 07 02 01 07 80 08 80 04 80 00 09 0d 80 03 0a 45 45 80 80 80 ff 02 04 -  1920
 ```
-
-
+- For a description of what byte means what, take a look at this file:
+```
+https://github.com/IowaScaledEngineering/mrbw-cst/blob/master/src/cst-eeprom.h
+```
 XCTU download
 ```
 http://blueridgeengineering.net/bin/40003026_AH.exe
