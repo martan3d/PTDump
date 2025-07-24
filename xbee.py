@@ -65,7 +65,9 @@ class xbeeController:
                   return
                except:
                   print ('Silicon Labs CP210x USB Driver Not Found!')
-                  pass
+                  return
+
+        print ('No driver found!')
 
     def getStatus(self):
         return self.sp
