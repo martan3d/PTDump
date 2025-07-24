@@ -1,3 +1,4 @@
+import sys
 from xbee import *
 
 def main():
@@ -6,6 +7,9 @@ def main():
     Xbee = xbeeController()
     if Xbee.getStatus() != None:
        Xbee.clear()
+    else:
+       print ("No USB port or driver found!")
+       sys.exit(0)
 
     start = 128
 
