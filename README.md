@@ -36,10 +36,11 @@ XCTU download
 - https://hub.digi.com/support/products/xctu/?path=/support/asset/xctu-v-659-windows-x86x64/
 
 Silicon Labs PC driver
-- http://blueridgeengineering.net/bin/pololu-cp2102-windows-121204.zip
+- https://www.silabs.com/software-and-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads
 
 Xbee Radio Module Sparkfun
 - https://www.sparkfun.com/xbee-3-module-pcb-antenna.html
+
 
 
 
