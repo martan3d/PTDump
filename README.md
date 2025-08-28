@@ -36,7 +36,7 @@ https://github.com/IowaScaledEngineering/mrbw-cst/blob/master/src/cst-eeprom.h
   
 XCTU download
 ```
-http://blueridgeengineering.net/bin/40003026_AH.exe
+https://hub.digi.com/support/products/xctu/?path=/support/asset/xctu-v-659-windows-x86x64/
 ```
 Silicon Labs PC driver
 ```
@@ -46,6 +46,7 @@ Xbee Radio Module Sparkfun
 ```
 https://www.sparkfun.com/xbee-3-module-pcb-antenna.html
 ```
+
 
 
 
