@@ -27,25 +27,19 @@ xbee port opened
 8755 - 33 22 02 01 0b 0d 08 06 80 80 00 80 18 18 00 18 16 06 80 80 80 ff 05 01 -  1664
 2003 - d3 07 02 01 06 07 08 80 80 0a 00 80 80 80 00 80 05 06 80 80 80 ff 02 04 -  1792
 1956 - a4 07 02 01 07 80 08 80 04 80 00 09 0d 80 03 0a 45 45 80 80 80 ff 02 04 -  1920
-```
-- For a description of what byte means what, take a look at this file:
-```
-https://github.com/IowaScaledEngineering/mrbw-cst/blob/master/src/cst-eeprom.h
-```
 
+For a description of what byte means what, take a look at this file:
+- https://github.com/IowaScaledEngineering/mrbw-cst/blob/master/src/cst-eeprom.h
   
 XCTU download
-```
-https://hub.digi.com/support/products/xctu/?path=/support/asset/xctu-v-659-windows-x86x64/
-```
+- https://hub.digi.com/support/products/xctu/?path=/support/asset/xctu-v-659-windows-x86x64/
+
 Silicon Labs PC driver
-```
- blueridgeengineering.net/bin/pololu-cp2102-windows-121204.zip
-```
+- http://blueridgeengineering.net/bin/pololu-cp2102-windows-121204.zip
+
 Xbee Radio Module Sparkfun
-```
-https://www.sparkfun.com/xbee-3-module-pcb-antenna.html
-```
+- https://www.sparkfun.com/xbee-3-module-pcb-antenna.html
+
 
 
 
